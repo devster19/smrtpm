@@ -1,11 +1,15 @@
+FORMAT: 1A
+HOST: https://polls.apiblueprint.org/
 
 # Maintenance
 
-Simple API allowing users to view and manage theirs maintenance request.
+ตัวอย่างออกแบบ API สำหรับงานแจ้งซ่อม
 
-## Maintenance by Branch Collection [/maintenance/{branchId}]
+
+## Maintenance by Branch Collection  [/maintenance/{branchId}]
 
 ### List All Maintenances [GET]
+* ทำหน้าที่แสดงผลรายการแจ้งซ่อมทั้งหมด:
 
 + Request (application/json)
 
@@ -21,12 +25,11 @@ Simple API allowing users to view and manage theirs maintenance request.
             "brandName":{"en": "Central RAMA IX", "th": "เซนทรัล พระราม 9"}
             "data": [
                 {
-                    "id": "b0ee8414",
+                    "shopId": "b0ee8414",
                     "shopName":"Believe Store Premium",
                     "requestBy":"สมคิด รักงาน",
-                    "contanctNumber":"0987767767"
-                    "status": "pending",
-                    "survey": { "status": false, "createDate": "" }
+                    "contanctNumber":"0987767767",
+                    "survey": { "status": false, "createDate": "" },
                     "time": {
                         "requestTime":"12:00-15:00",
                         "startDate": "2020-09-25T08:45:00Z",
@@ -39,14 +42,18 @@ Simple API allowing users to view and manage theirs maintenance request.
                         "/maintenance/images/b0ee8414-03.jpg"
                     ],
                     "cost":0,
+                    "status":"pending",
                     "responseBy": {
-                        "name": "",
-                        "contanctNumber":""
+                        "name": "มนัส ชำนาญซ่อม",
+                        "contanctNumber":"0867777765",
+                        "responseMessage":""
                     },
-                    "createDate": "2020-09-25T08:45:00Z"
+                    "createDate": "2020-09-25T08:45:00Z",
+                    "updateDate": "",
+                    "updateBy": ""
                 },
                 {
-                    "id": "c0746f59",
+                    "shopId": "c0746f59",
                     "shopName":"Suki Shabu Gold",
                     "requestBy":"สมศรี ขยันหมั่นเพียร",
                     "contanctNumber":"0987767000",
@@ -64,10 +71,13 @@ Simple API allowing users to view and manage theirs maintenance request.
                         "name": "มนัส ชำนาญซ่อม",
                         "contanctNumber":"0867777765"
                     },
-                    "createDate": "2020-08-25T08:45:00Z"
+                    "createDate": "2020-08-25T08:45:00Z",
+                    "createDate": "2020-08-25T08:45:00Z",
+                    "updateDate": "",
+                    "updateBy": ""
                 },
                 {
-                    "id": "d0ee8419",
+                    "shopId": "d0ee8419",
                     "shopName":"Nail Shop",
                     "requestBy":"สมพล มีความเพียร",
                     "contanctNumber":"0987767888"
@@ -83,15 +93,19 @@ Simple API allowing users to view and manage theirs maintenance request.
                     "cost":0,
                     "responseBy": {
                         "name": "มนัส ชำนาญซ่อม",
-                        "contanctNumber":"0867777765"
+                        "contanctNumber":"0867777765",
+                        "responseMessage":""
                     },
-                    "createDate": "2020-08-25T08:45:00Z"
+                    "createDate": "2020-08-25T08:45:00Z",
+                    "updateDate": "",
+                    "updateBy": ""
                 }
             ]
         }
         
 
 ### Create a New Maintenance [POST]
+* เปิดงานแจ้งซ่อมใหม่
 
 + Request (application/json)
 
@@ -102,12 +116,13 @@ Simple API allowing users to view and manage theirs maintenance request.
 + Request (application/json)
 
         {
+            "shopId":"bb00232",
             "shopName":"Suki Shabu Gold",
             "requestBy":"สมศรี ขยันหมั่นเพียร",
             "contanctNumber":"0987767000",
             "status": "in progress",
             "time": {
-                "type": "asas",
+                "requestTime":"9:00-12:00",
                 "startDate": "2020-08-25T08:45:00Z",
                 "endDate": ""
             },
@@ -121,12 +136,12 @@ Simple API allowing users to view and manage theirs maintenance request.
 
             {
                 "result": "Created",
-                "id": "c0746f59",
+                "jobId": "c0746f59",
                 "shopName":"Suki Shabu Gold",
                 "requestBy":"สมศรี ขยันหมั่นเพียร",
                 "contanctNumber":"0987767000",
                 "status": "in progress",
-                "survey": { "status": false, "createDate": "" }
+                "survey": { "status": false, "createDate": "" },
                 "time": {
                     "requestTime":"9:00-12:00",
                     "startDate": "2020-08-25T08:45:00Z",
@@ -137,17 +152,19 @@ Simple API allowing users to view and manage theirs maintenance request.
                 "cost":0,
                 "responseBy": {
                     "name": "",
-                    "contanctNumber":""
+                    "contanctNumber":"",
+                    "responseMessage":""
                 },
                 "createDate": "2020-08-25T08:45:00Z",
-                "notificationStatus":false
+                "updateDate": "",
+                "updateBy": ""
             }
 
 
-## Maintenace by Id Collection  [/maintenance/{branchId}/{id}]
+## Maintenace by ShopId Collection  [/maintenance/{branchId}/{shopId}]
 
-### Get Maintenance by Id [GET]
-
+### Get Maintenance by ShopId [GET]
+* ดูรายละเอียดการแจ้งซ่อมทีละรายการ
 + Request (application/json)
 
     + Headers 
@@ -179,13 +196,16 @@ Simple API allowing users to view and manage theirs maintenance request.
             "cost":0,
             "responseBy": {
                 "name": "",
-                "contanctNumber":""
+                "contanctNumber":"",
+                "responseMessage":""
             },
-            "createDate": "2020-08-25T08:45:00Z"
+            "createDate": "2020-08-25T08:45:00Z",
+            "updateDate": "",
+            "updateBy": ""
         }
 
-### Update Maintenance by Id [PUT]
-
+### Update Maintenance by ShopId [PUT]
+* อัพเดทดูรายละเอียดการแจ้งซ่อมทีละรายการ
 + Request (application/json)
 
     + Headers 
@@ -228,16 +248,17 @@ Simple API allowing users to view and manage theirs maintenance request.
                 "attachments":[],
                 "cost":550,
                 "responseBy": {
-                    "name": "มนัส ชำนาญซ่อม
-                    "contanctNumber":""
+                    "name": "มนัส ชำนาญซ่อม,
+                    "contanctNumber":"",
+                    "responseMessage":""
                 },
-                "notificationStatus":true
-                "createDate": "2020-08-25T08:45:00Z"
-        
+                "createDate": "2020-08-25T08:45:00Z",
+                "updateDate": "",
+                "updateBy": ""
             }
 
-### Delete Maintenance by Id [DELETE] 
-
+### Delete Maintenance by ShopId [DELETE] 
+* ลบการแจ้งซ่อมทีละรายการ
 + Request (application/json)
 
     + Headers 
@@ -255,7 +276,8 @@ Simple API allowing users to view and manage theirs maintenance request.
             
             
             
-### Rate Maintenance by Id [POST] 
+### Rate Maintenance by ShopId [POST] 
+* ประเมินการแจ้งซ่อม
 + Request (application/json)
 
     + Headers 
@@ -281,7 +303,56 @@ Simple API allowing users to view and manage theirs maintenance request.
                 "result": "Created",
                 "id": "c0746f59",
                 "shopName":"Suki Shabu Gold",
-                "survey": { "status": true, "createDate": "2020-08-26T10:45:00Z" },
-                "notificationStatus": true
-                
+                "survey": { "status": true, "createDate": "2020-08-26T10:45:00Z" }
+            }
+            
+## Maintenace for Operator Collection  [/maintenance/getmaintenance/]
+
+### Get All My Tasks [POST] 
+* ดูรายการงานทั้งหมดของช่าง
+
++ Request (application/json)
+
+        {
+            "username": "",
+            "password": ""
+        }
+        
++ Response 201 (application/json)
+
+    + Body
+
+            {
+               "data":[
+                    {
+                        "id": "b0ee8414",
+                        "branchId": "000008783",
+                        "brandName":{"en": "Central RAMA IX", "th": "เซนทรัล พระราม 9"},
+                        "shopName":"Believe Store Premium",
+                        "requestBy":"สมคิด รักงาน",
+                        "contanctNumber":"0987767767",
+                        "survey": { "status": false, "createDate": "" }
+                        "time": {
+                            "requestTime":"12:00-15:00",
+                            "startDate": "2020-09-25T08:45:00Z",
+                            "endDate": ""
+                        },
+                        "description": "เปลี่ยนหลอดไฟ",
+                        "attachments":[
+                            "/maintenance/images/b0ee8414-01.jpg",
+                            "/maintenance/images/b0ee8414-02.jpg",
+                            "/maintenance/images/b0ee8414-03.jpg"
+                        ],
+                        "cost":0,
+                        "status":"pending",
+                        "responseBy": {
+                            "name": "มนัส ชำนาญซ่อม",
+                            "contanctNumber":"0867777765",
+                            "responseMessage":""
+                        },
+                        "createDate": "2020-09-25T08:45:00Z",
+                        "updateDate": "",
+                        "updateBy": ""
+                    }
+               ]
             }
