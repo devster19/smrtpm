@@ -31,7 +31,7 @@
                     "survey": { "status": false, "createDate": "" },
                     "time": {
                         "requestTime":"12:00-15:00",
-                        "startDate": "2020-09-25T08:45:00Z",
+                        "startDate": "2020-09-25T08:45:00",
                         "endDate": ""
                     },
                     "description": "เปลี่ยนหลอดไฟ",
@@ -47,7 +47,7 @@
                         "contanctNumber":"0867777765",
                         "responseMessage":""
                     },
-                    "createDate": "2020-09-25T08:45:00Z",
+                    "createDate": "2020-09-25T08:45:00",
                     "updateDate": "",
                     "updateBy": ""
                 },
@@ -60,7 +60,7 @@
                     "survey": { "status": false, "createDate": "" }
                     "time": {
                         "requestTime":"9:00-12:00",
-                        "startDate": "2020-08-25T08:45:00Z",
+                        "startDate": "2020-08-25T08:45:00",
                         "endDate": ""
                     },
                     "description": "ไฟรั่ว",
@@ -70,8 +70,8 @@
                         "name": "มนัส ชำนาญซ่อม",
                         "contanctNumber":"0867777765"
                     },
-                    "createDate": "2020-08-25T08:45:00Z",
-                    "createDate": "2020-08-25T08:45:00Z",
+                    "createDate": "2020-08-25T08:45:00",
+                    "createDate": "2020-08-25T08:45:00",
                     "updateDate": "",
                     "updateBy": ""
                 },
@@ -81,11 +81,11 @@
                     "requestBy":"สมพล มีความเพียร",
                     "contanctNumber":"0987767888"
                     "status": "completed",
-                    "survey":  { "status": true, "createDate": "2020-08-30T10:45:00Z" }
+                    "survey":  { "status": true, "createDate": "2020-08-30T10:45:00" }
                     "time": {
                         "requestTime":"9:00-12:00",
-                        "startDate": "2020-08-25T08:45:00Z",
-                        "endDate": "2020-08-25T10:00:00Z"
+                        "startDate": "2020-08-25T08:45:00",
+                        "endDate": "2020-08-25T10:00:00"
                     },
                     "description": "ซ่อมท่อน้ำรั่ว",
                     "attachments":["/maintenance/images/d0ee8419-01.jpg"],
@@ -95,7 +95,7 @@
                         "contanctNumber":"0867777765",
                         "responseMessage":""
                     },
-                    "createDate": "2020-08-25T08:45:00Z",
+                    "createDate": "2020-08-25T08:45:00",
                     "updateDate": "",
                     "updateBy": ""
                 }
@@ -122,7 +122,7 @@
             "status": "in progress",
             "time": {
                 "requestTime":"9:00-12:00",
-                "startDate": "2020-08-25T08:45:00Z",
+                "startDate": "2020-08-25T08:45:00",
                 "endDate": ""
             },
             "description": "ไฟรั่ว",
@@ -143,7 +143,7 @@
                 "survey": { "status": false, "createDate": "" },
                 "time": {
                     "requestTime":"9:00-12:00",
-                    "startDate": "2020-08-25T08:45:00Z",
+                    "startDate": "2020-08-25T08:45:00",
                     "endDate": ""
                 },
                 "description": "ไฟรั่ว",
@@ -154,7 +154,7 @@
                     "contanctNumber":"",
                     "responseMessage":""
                 },
-                "createDate": "2020-08-25T08:45:00Z",
+                "createDate": "2020-08-25T08:45:00",
                 "updateDate": "",
                 "updateBy": ""
             }
@@ -183,7 +183,7 @@
             "survey": { "status": false, "createDate": "" }
             "time": {
                 "requestTime":"12:00-15:00",
-                "startDate": "2020-09-25T08:45:00Z",
+                "startDate": "2020-09-25T08:45:00",
                 "endDate": ""
             },
             "description": "เปลี่ยนหลอดไฟ",
@@ -198,7 +198,7 @@
                 "contanctNumber":"",
                 "responseMessage":""
             },
-            "createDate": "2020-08-25T08:45:00Z",
+            "createDate": "2020-08-25T08:45:00",
             "updateDate": "",
             "updateBy": ""
         }
@@ -220,8 +220,8 @@
             "status": "completed",
             "time": {
                 "requestTime":"15:00-18:00",
-                "startDate": "2020-08-25T08:45:00Z",
-                "endDate": "2020-08-25T16:00:00Z"
+                "startDate": "2020-08-25T08:45:00",
+                "endDate": "2020-08-25T16:00:00"
             },
             "description": "ไฟรั่ว ต่อสายดิน เดินสายไฟใหม่",
             "attachments":[],
@@ -237,11 +237,11 @@
                 "requestBy":"สมศรี ขยันหมั่นเพียร",
                 "contanctNumber":"0987767000",
                 "status": "completed",
-                "survey": { "status": true, "createDate": "2020-08-30T10:45:00Z" }
+                "survey": { "status": true, "createDate": "2020-08-30T10:45:00" }
                 "time": {
                     "requestTime":"15:00-18:00",
-                    "startDate": "2020-08-25T08:45:00Z",
-                    "endDate": "2020-08-25T16:00:00Z"
+                    "startDate": "2020-08-25T08:45:00",
+                    "endDate": "2020-08-25T16:00:00"
                 },
                 "description": "ไฟรั่ว ต่อสายดิน เดินสายไฟใหม่",
                 "attachments":[],
@@ -251,7 +251,7 @@
                     "contanctNumber":"",
                     "responseMessage":""
                 },
-                "createDate": "2020-08-25T08:45:00Z",
+                "createDate": "2020-08-25T08:45:00",
                 "updateDate": "",
                 "updateBy": ""
             }
@@ -302,7 +302,7 @@
                 "result": "Created",
                 "id": "c0746f59",
                 "shopName":"Suki Shabu Gold",
-                "survey": { "status": true, "createDate": "2020-08-26T10:45:00Z" }
+                "survey": { "status": true, "createDate": "2020-08-26T10:45:00" }
             }
             
 ## Maintenace for Operator Collection  [/maintenance/getmaintenance/]
@@ -333,7 +333,7 @@
                         "survey": { "status": false, "createDate": "" }
                         "time": {
                             "requestTime":"12:00-15:00",
-                            "startDate": "2020-09-25T08:45:00Z",
+                            "startDate": "2020-09-25T08:45:00",
                             "endDate": ""
                         },
                         "description": "เปลี่ยนหลอดไฟ",
@@ -349,7 +349,7 @@
                             "contanctNumber":"0867777765",
                             "responseMessage":""
                         },
-                        "createDate": "2020-09-25T08:45:00Z",
+                        "createDate": "2020-09-25T08:45:00",
                         "updateDate": "",
                         "updateBy": ""
                     }
