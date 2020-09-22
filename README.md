@@ -1,10 +1,62 @@
-FORMAT: 1A
-HOST: https://polls.apiblueprint.org/
+
 
 # Maintenance
 
 ตัวอย่างออกแบบ API สำหรับงานแจ้งซ่อม
 
+
+
+## คำอธิบาย Response (object)
++ branchId: 000008783 (string)
+
+    ตัวอย่าง  ไอดีสาขา.
+
++ brandName: {"en": "Central RAMA IX", "th": "เซนทรัล พระราม 9"}  (object)
+
+    แสดงข้อมูลชื่อภาษา ทั้งไทย และ อังกฤษ
+    
++ data: [{}]  (Array of object)
+
+    แสดงข้อมูลที่จำเป็นต่อการแสดงผล  UI ดังต่อไปนี้
+    
+    **shopId** : (string) ไอดีของร้านที่ทำการแจ้งซ่อม
+    
+    **shopName**: (object) ชื่อร้าน
+    
+    **requestBy**: (string) ชื่อผู้แจ้งซ่อม
+
+    **contanctNumber**: (string) เบอร์โทรผู้แจ้งซ่อม
+    
+    **survey**: (object) แสดงสถานะประเมินการแจ้งซ่อม
+    - default = false , true เมื่อมีการประเมินแล้ว
+    - createDate:(datetime)  วันที่ทำการประเมิน
+
+    **time**: (object) แสดงวันทำรายการ
+    - *requestTime*: (string) แสดงช่วงเวลาที่ต้องการให้ช่างเข้าไปดำเนินการซ่อม
+    - *startDate*: (datetime) วันเริ่มดำเนินการแจ้งซ่อม
+    - *endDate*: (datetime)  วันสิ้นสุดงาน
+    
+    **type**: (string) ประเภทของงานแจ้งซ่อม
+    
+    **description**: (string) รายละเอียดเพิ่มเติมการแจ้งซ่อม
+    
+    **attachments**: (array of string) พาธรูปที่ผู้ใช้อัพโหลด ประกอบการแจ้งซ่อม
+    
+    **cost**: (number) ค่าใช้จ่ายในการซ่อม
+     
+    **status**: (string) สถานะล่าสุดของการซ่อม
+    
+    **responseBy**: (object) รายละเอียดของช่าง
+    - name: (string) ชื่อของช่างซ่อม
+    - contactNumber: (string) เบอร์โทรติดต่อช่าง
+    
+    **createDate**: (datetime) วันและเวลาที่สร้างรายการแจ้งซ่อม
+    
+    **updateDate**: (datetime) วันและเวลาที่มีการอัพเดทรายการแจ้งซ่อม
+    
+    **updateBy**: (string) ชื่อผู้ทำการอัพเดทข้อมูล
+     
+     
 
 ## Maintenance by Branch Collection  [/maintenance/{branchId}]
 
@@ -32,7 +84,7 @@ HOST: https://polls.apiblueprint.org/
                     "survey": { "status": false, "createDate": "" },
                     "time": {
                         "requestTime":"12:00-15:00",
-                        "startDate": "2020-09-25T08:45:00",
+                        "startDate": "2020-09-25T00:00:00",
                         "endDate": ""
                     },
                     "type": "EXISTING_MR_TYPE",
@@ -50,7 +102,7 @@ HOST: https://polls.apiblueprint.org/
                         "responseMessage":""
                     },
                     "createDate": "2020-09-25T08:45:00",
-                    "updateDate": "",
+                    "updateDate": null,
                     "updateBy": ""
                 },
                 {
@@ -79,8 +131,7 @@ HOST: https://polls.apiblueprint.org/
                         "contanctNumber":"0867777765"
                     },
                     "createDate": "2020-08-25T08:45:00",
-                    "createDate": "2020-08-25T08:45:00",
-                    "updateDate": "",
+                    "updateDate": null,
                     "updateBy": ""
                 }
             ]
@@ -141,7 +192,7 @@ HOST: https://polls.apiblueprint.org/
                     "responseMessage":""
                 },
                 "createDate": "2020-08-25T08:45:00",
-                "updateDate": "",
+                "updateDate": null,
                 "updateBy": ""
             }
 
@@ -185,7 +236,7 @@ HOST: https://polls.apiblueprint.org/
                 "responseMessage":""
             },
             "createDate": "2020-08-25T08:45:00",
-            "updateDate": "",
+            "updateDate": null,
             "updateBy": ""
         }
 
@@ -240,7 +291,7 @@ HOST: https://polls.apiblueprint.org/
                     "responseMessage":""
                 },
                 "createDate": "2020-08-25T08:45:00",
-                "updateDate": "",
+                "updateDate": null,
                 "updateBy": ""
             }
 
@@ -338,8 +389,12 @@ HOST: https://polls.apiblueprint.org/
                             "responseMessage":""
                         },
                         "createDate": "2020-09-25T08:45:00",
-                        "updateDate": "",
+                        "updateDate": null,
                         "updateBy": ""
                     }
                ]
             }
+            
+
+
+
