@@ -34,7 +34,8 @@
                         "startDate": "2020-09-25T08:45:00",
                         "endDate": ""
                     },
-                    "description": "เปลี่ยนหลอดไฟ",
+                    "type": "EXISTING_MR_TYPE",
+                    "description": "ไฟรั่ว",
                     "attachments":[
                         "/maintenance/images/b0ee8414-01.jpg",
                         "/maintenance/images/b0ee8414-02.jpg",
@@ -63,7 +64,13 @@
                         "startDate": "2020-08-25T08:45:00",
                         "endDate": ""
                     },
-                    "description": "ไฟรั่ว",
+                   "type": "other",
+                    "description": "ไฟรั่วและมีอาการกระพริบติดๆ ดับๆ ตลอดเวลา",
+                    "attachments":[
+                        "/maintenance/images/b0ee8414-01.jpg",
+                        "/maintenance/images/b0ee8414-02.jpg",
+                        "/maintenance/images/b0ee8414-03.jpg"
+                    ],
                     "attachments":[],
                     "cost":0,
                     "responseBy": {
@@ -71,30 +78,6 @@
                         "contanctNumber":"0867777765"
                     },
                     "createDate": "2020-08-25T08:45:00",
-                    "createDate": "2020-08-25T08:45:00",
-                    "updateDate": "",
-                    "updateBy": ""
-                },
-                {
-                    "shopId": "d0ee8419",
-                    "shopName":"Nail Shop",
-                    "requestBy":"สมพล มีความเพียร",
-                    "contanctNumber":"0987767888"
-                    "status": "completed",
-                    "survey":  { "status": true, "createDate": "2020-08-30T10:45:00" }
-                    "time": {
-                        "requestTime":"9:00-12:00",
-                        "startDate": "2020-08-25T08:45:00",
-                        "endDate": "2020-08-25T10:00:00"
-                    },
-                    "description": "ซ่อมท่อน้ำรั่ว",
-                    "attachments":["/maintenance/images/d0ee8419-01.jpg"],
-                    "cost":0,
-                    "responseBy": {
-                        "name": "มนัส ชำนาญซ่อม",
-                        "contanctNumber":"0867777765",
-                        "responseMessage":""
-                    },
                     "createDate": "2020-08-25T08:45:00",
                     "updateDate": "",
                     "updateBy": ""
@@ -125,6 +108,7 @@
                 "startDate": "2020-08-25T08:45:00",
                 "endDate": ""
             },
+            "type": "EXISTING_MR_TYPE",
             "description": "ไฟรั่ว",
             "attachments":[]
         }
@@ -146,6 +130,7 @@
                     "startDate": "2020-08-25T08:45:00",
                     "endDate": ""
                 },
+                "type": "EXISTING_MR_TYPE",
                 "description": "ไฟรั่ว",
                 "attachments":[]
                 "cost":0,
@@ -174,7 +159,6 @@
 
         
         {
-            "result": "Updated",
             "id": "b0ee8414",
             "shopName":"Believe Store Premium",
             "requestBy":"สมคิด รักงาน",
@@ -186,7 +170,8 @@
                 "startDate": "2020-09-25T08:45:00",
                 "endDate": ""
             },
-            "description": "เปลี่ยนหลอดไฟ",
+            "type": "EXISTING_MR_TYPE",
+            "description": "ไฟรั่ว"",
             "attachments":[
                 "/maintenance/images/b0ee8414-01.jpg",
                 "/maintenance/images/b0ee8414-02.jpg",
@@ -223,7 +208,8 @@
                 "startDate": "2020-08-25T08:45:00",
                 "endDate": "2020-08-25T16:00:00"
             },
-            "description": "ไฟรั่ว ต่อสายดิน เดินสายไฟใหม่",
+            "type": "EXISTING_MR_TYPE",
+            "description": "ไฟรั่ว",
             "attachments":[],
         }
 
@@ -243,7 +229,8 @@
                     "startDate": "2020-08-25T08:45:00",
                     "endDate": "2020-08-25T16:00:00"
                 },
-                "description": "ไฟรั่ว ต่อสายดิน เดินสายไฟใหม่",
+                "type": "EXISTING_MR_TYPE",
+                "description": "ไฟรั่ว"",
                 "attachments":[],
                 "cost":550,
                 "responseBy": {
