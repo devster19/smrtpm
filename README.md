@@ -1,6 +1,6 @@
 
 
-# Maintenance
+# SMARTPMv1.0.2
 
 ตัวอย่างออกแบบ API สำหรับงานแจ้งซ่อม
 
@@ -36,8 +36,10 @@
     - *startDate*: (datetime) วันเริ่มดำเนินการแจ้งซ่อม
     - *endDate*: (datetime)  วันสิ้นสุดงาน
     
-    **type**: (string) ประเภทของงานแจ้งซ่อม
-    
+    **type**: (object) ประเภทของงานแจ้งซ่อม
+        - *category*: (string) หัวข้อการแจ้งซ่อมยึดตามระบบที่มีปัจจุบัน
+        - *subcategory*: (string) รายละเอียดย่อยการแจ้งซ่อมที่สัมพันธ์กับหัวข้อการแจ้ง ยึดตามข้อมูลปัจจุบัน
+        
     **description**: (string) รายละเอียดเพิ่มเติมการแจ้งซ่อม
     
     **attachments**: (array of string) พาธรูปที่ผู้ใช้อัพโหลด ประกอบการแจ้งซ่อม
@@ -160,7 +162,7 @@
                 "startDate": "2020-08-25T08:45:00",
                 "endDate": ""
             },
-            "type": "EXISTING_MR_TYPE",
+            "type": {"category":"EXISTING_CATEGORY", "subcategory":"EXISTING_RELATED_SUBCATEGORY"},
             "description": "ไฟรั่ว",
             "attachments":[]
         }
